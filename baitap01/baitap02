@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8"/> 
+     <title>Baitap02</title>
+   </head>
+   <body>
+     <h1>Khám phá thế giới cộng nghệ</h1> <br>
+       <P>
+       Trang web <cite>TITV.vn</cite> là điểm đến lí tưởng cho những người yêu thích công nghệ và muốn khám phá sâu hơn về thế giới số. Cùng chúng tôi bắt đầu cuộc hành trình của bạn!
+       </P> 
+     <h2>
+      Bài 1: Lập trình cơ bản
+     </h2>
+      <p>
+        Bạn bắt đầu học tập lập trình và muốn biết thêm về HTML, CSS và JavaScript.
+        Trên trang web của chúng tôi bạn sẽ tìm thấy các khóa học cơ bản như <i>Lập trình web căn bản và HTML hay CSS cho người mới bắt đầu.</i>
+      </p>
+      <h2>
+        Bài 2: Công nghệ mới
+      </h2>
+      <p>
+        Bạn muốn cập nhật với các công nghệ mới nhất? Đừng bỏ lỡ các bài viết về <em>Trí tuệ nhân tạo,Blockchain và Thực tế ảo/Viết tảo</em> trên trang web của chúng tôi. Hãy trở thành một <em>tech pioneer</em>
+        và khám phá các ứng dụng tiềm năng của chúng.
+      </p>
+      <h2>
+        Bài 3: Cộng dồng
+      </h2>
+      <p>
+        Hãy tham gia cộng đồng TITV.vn để trao đổi kiến thức, chia sẻ ý tưởng và kết nối với những người có cùng đam mê. Tại đây,
+        bạn có thể tìm thấy các diễn đàn thảo luận, các nhóm nghiên cứu,và thậm chí là cơ hội tham gia vào các dự án 
+        <abbr title="Mã nguồn mở">Open Source</abbr>. <br>
+        <q>Tương tác với cộng đồng là cách tốt nhất để phát triển và học hỏi</q>,
+        như một thành viên của cộng đồng, bạn sẽ có cơ hội gặp gỡ và hợp tác với những người giỏi giang và đam mê trong ngành công nghệ. <br>
+        Bên cạnh đó, bạn cũng có thể tận dụng các công cụ tiện ích như <abbr title="Trình soạn thảo mã nguồn">IDE</abbr> và
+        <abbr title="Hệ quản trị cơ sở dữ liệu">DBMS</abbr>
+        để tạo ra những sản phẩm sáng tạo và thú vị. <br>
+        
+      </p>
+     <br>
+     <p>Bạn đã bắt đầu học lập trình và muốn biết thêm về 
+   </body>
+ </html>
