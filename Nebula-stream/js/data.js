@@ -1,35 +1,63 @@
 // js/data.js
 
-// Dữ liệu phim nổi bật (Hero Banner)
-const HERO_MOVIE = {
-    id: 0,
-    title: "CYBER ODYSSEY",
-    description: "Trong một tương lai nơi ký ức có thể mua bán, một hacker buộc phải đánh cắp quá khứ của chính mình để cứu lấy nhân loại khỏi sự lãng quên vĩnh cửu.",
-    // Hiện tại vẫn dùng link online. 
-    // Nếu bạn muốn dùng ảnh trong máy, sửa thành: "./images/ten-anh.jpg"
-    image: "https://images.unsplash.com/photo-1535016120720-40c6874c3b1c?auto=format&fit=crop&w=1600&q=80",
-    match: "98% Match",
-    year: "2024",
-    age: "16+",
-    tags: ["Sci-Fi", "Action", "Cyberpunk"]
+// --- CẤU HÌNH API ---
+const API_KEY = "ae2da519"; 
+const API_URL = "https://www.omdbapi.com/";
+
+// --- DANH SÁCH SERVER ---
+const MOVIE_SERVERS = [
+    { id: 1, name: "Server VIP (VidSrc)", url: "https://vidsrc.xyz/embed/movie" },
+    { id: 2, name: "Server Dự Phòng (AutoEmbed)", url: "https://player.autoembed.cc/embed/movie" }
+];
+
+// --- DANH SÁCH PHIM BOM TẤN (Thêm phim mới vào đây) ---
+const BLOCKBUSTER_POOL = [
+    "Harry Potter and the Sorcerer's Stone",
+    "Harry Potter and the Chamber of Secrets",
+    "Harry Potter and the Prisoner of Azkaban",
+    "Harry Potter and the Goblet of Fire",
+    "Harry Potter and the Order of the Phoenix",
+    "Harry Potter and the Half-Blood Prince",
+    "Harry Potter and the Deathly Hallows: Part 1",
+    "Harry Potter and the Deathly Hallows: Part 2",
+    "Dune: Part Two", "Oppenheimer", "Avatar: The Way of Water", "The Batman",
+    "Top Gun: Maverick", "Avengers: Endgame",
+    "Interstellar", "Inception", "The Dark Knight", "Blade Runner 2049",
+    "Godzilla x Kong: The New Empire", "Deadpool & Wolverine", "Civil War",
+    "Furiosa: A Mad Max Saga", "Kingdom of the Planet of the Apes",
+    "Everything Everywhere All At Once", "Joker", "Guardians of the Galaxy Vol. 3", 
+    "Cyberpunk: Edgerunners", "Arcane"
+];
+
+// --- MAP TRAILER YOUTUBE ---
+const TRAILER_MAP = {
+    "Harry Potter and the Sorcerer's Stone": "VyHV0BRtdxo",
+    "Harry Potter and the Chamber of Secrets": "1bq0qff4iF8",
+    "Harry Potter and the Prisoner of Azkaban": "1ZdlAg3j8nI",
+    "Harry Potter and the Goblet of Fire": "3EGojp4Hh6I",
+    "Harry Potter and the Order of the Phoenix": "LLAaW1EgyY8",
+    "Harry Potter and the Half-Blood Prince": "tAiy66Xrsz4",
+    "Harry Potter and the Deathly Hallows: Part 1": "MxqsmsA8y5k",
+    "Harry Potter and the Deathly Hallows: Part 2": "mObK5XD8udk",
+    "Dune: Part Two": "Way9Dexny3w",
+    "Oppenheimer": "uYPbbksJxIg",
+    "Avatar: The Way of Water": "a6VVrAZUnsc",
+    "The Batman": "mqqft2x_Aa4",
+    "Top Gun: Maverick": "giXco2jaZ_4",
+    "Avengers: Endgame": "TcMBFSGVi1c",
+    "Interstellar": "zSWdZVtXT7E",
+    "Inception": "YoHD9XEInc0",
+    "The Dark Knight": "EXeTwQWrcwY",
+    "Blade Runner 2049": "gCcx85zbxz4",
+    "Godzilla x Kong: The New Empire": "lV1OOlGwExM",
+    "Deadpool & Wolverine": "DFTJTlri4MI",
+    "Civil War": "aDyQxtg0V2w",
+    "Furiosa: A Mad Max Saga": "XJMuhwVlca4",
+    "Kingdom of the Planet of the Apes": "XtFI7SNtVpY",
+    "Joker": "zAGVQLHvwOY",
+    "Guardians of the Galaxy Vol. 3": "u3V5KDWgQqE",
+    "Cyberpunk: Edgerunners": "JtqIas3bYhg",
+    "Arcane": "fXmAurh012s",
+    "Everything Everywhere All at Once": "wxN1T1uxQ2g",
+    "Spider-Man: Across the Spider-Verse": "shW9i6k8cB0"
 };
-
-// Danh sách các danh mục phim
-const CATEGORIES = [
-    { id: 'trending', title: "Thịnh Hành Trên Nebula" },
-    { id: 'new', title: "Mới Phát Hành" },
-    { id: 'scifi', title: "Vũ Trụ & Khoa Học Viễn Tưởng" },
-    { id: 'anime', title: "Anime Tuyển Chọn" },
-];
-
-// Danh sách phim lẻ
-const MOVIES_DATA = [
-    { id: 1, title: "Neon Nights", image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=800&q=80", match: "95%", duration: "1h 45m" },
-    { id: 2, title: "The Void Walker", image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80", match: "87%", duration: "2h 10m" },
-    { id: 3, title: "Lost in Tokyo", image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80", match: "92%", duration: "1h 30m" },
-    { id: 4, title: "Mars Mission", image: "https://images.unsplash.com/photo-1614728853913-1e2203d9d73e?auto=format&fit=crop&w=800&q=80", match: "88%", duration: "2h 05m" },
-    { id: 5, title: "Blue Protocol", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80", match: "99%", duration: "2h 30m" },
-    { id: 6, title: "Desert Storm", image: "https://images.unsplash.com/photo-1547234935-80c7142ee969?auto=format&fit=crop&w=800&q=80", match: "75%", duration: "1h 55m" },
-    { id: 7, title: "Urban Legend", image: "https://images.unsplash.com/photo-1517604931442-71053e3e2e3c?auto=format&fit=crop&w=800&q=80", match: "82%", duration: "1h 40m" },
-    { id: 8, title: "Deep Sea", image: "https://images.unsplash.com/photo-1582967788606-a171f1080ca8?auto=format&fit=crop&w=800&q=80", match: "91%", duration: "1h 50m" },
-];
