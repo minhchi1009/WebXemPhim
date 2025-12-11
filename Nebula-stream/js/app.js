@@ -462,7 +462,7 @@ const Footer = () => (
             </div>
             
             <div className="pt-8 border-t border-white/5 text-center text-xs text-gray-600">
-                © 2024 Nebula Stream Inc. Designed by Gemini AI.
+                © 2025 Nebula Stream.
             </div>
         </div>
     </footer>
